@@ -1,16 +1,20 @@
-public void setup()
-{
+class Tendron {
+  public void generate(){
+    background(0);
+    Cluster c = new Cluster(60, width / 2, height / 2);
+    c.show();
+  }
+}
+void setup(){
   size(500, 500);  
-  background(255);
+  background(0);
   noLoop();
 }
-
-public void draw()
-{
-  background(255);
-  Cluster c = new Cluster(50, 250, 250); // initial number of segments in the tendril and starting (x,y) coordinate
+void draw(){
+  fill(0,0,0);
+  Tendron t = new Tendron();
+  t.generate();
 }
-public void mousePressed()
-{
+void mousePressed(){
   redraw();
 }
